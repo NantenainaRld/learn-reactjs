@@ -1,1 +1,26 @@
 ### LEARN REACT JS ###
+
+# 00
+- ReactJS is a library created by Meta (formerly Facebook).
+- Prerequisites:
+    - JavaScript proficiency (advanced).
+    - Node.js installed on your system.
+    - Mastery of JavaScript ES6+ syntax (Arrow functions, Destructuring, Modules, etc.).
+
+## Initialization with 2 methods:
+    - Using CRA (Create React App):
+    ```bash
+    npx create-react-app my-react-app
+    ```
+
+    - Using Vite (Recommended):
+        ```bash
+        npm create vite@latest
+        # or
+        npx create-vite@latest
+        ```
+        - Follow the prompts (Select React, then JavaScript/JSX).
+
+## Hello World:
+    - Edit the `src/App.jsx` file and save.
+    - The changes are applied automatically via **HMR** (Hot Module Replacement) without a full page reload.      
