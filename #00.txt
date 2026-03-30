@@ -41,4 +41,72 @@
     - **vite.config.js**:
         - Configuration file for Vite (plugins, server ports, etc.).
 
-## 02
+# 02
+## Components:
+
+- **Reusability**: 
+    - Components are independent and reusable bits of code. While React components are specific to React, the concept of "Web Components" exists for cross-framework use.
+- **Functional vs Class Components**:
+    - **Functional Components (Modern/Stateless-like)**: 
+        - These are simple JavaScript functions that return JSX. In 2026, they are the standard.
+        - Even if they hold state (via Hooks), they are still written as functions.
+    - **Class Components (Legacy/Stateful)**: 
+        - Use ES6 classes that extend `React.Component`. 
+        - They are now considered legacy and rarely used in new React 19+ projects.
+
+- **Example (Functional Component)**:
+    ```jsx
+    function Welcome() {
+        return <h1>Hello, React 19!</h1>;
+    }
+    ```
+
+## Create our first functional component:
+
+- Create the folder `src/components`.
+- Create the file `src/components/Greet.jsx`.
+- Define the component:
+    ```jsx
+    function Greet() {
+        return <h1>Hello from Greet Component!</h1>;
+    }
+    export default Greet;
+    ```
+- Import and use the component in `src/App.jsx`:
+    ```jsx
+    import Greet from './components/Greet';
+
+    function App() {
+        return (
+            <>
+                <Greet />
+                {/* Or with children if handled by props */}
+                <Greet>Text here</Greet>
+            </>
+        );
+    }
+    ```
+
+## Create our first class component (Legacy/Not recommended):
+
+- Create the file `src/components/Welcome.jsx`.
+    ```jsx
+    import { Component } from 'react';
+
+    class Welcome extends Component {
+        render() {
+            return <h1>Welcome from a Class Component!</h1>;
+        }
+    }
+    export default Welcome;
+    ```
+
+## Rules and Exports:
+
+- Single Parent Rule**: A component must return a single parent element (use Fragments `<>` if needed).
+- Default Export: 
+    - Usage: `export default Greet;`
+    - Import: `import Greet from './components/Greet';` (You can rename the variable during import).
+- Named Export: 
+    - Usage: `export const Greet = () => ...;`
+    - Import: `import { Greet } from './components/Greet';` (Must use the exact name inside curly braces).
