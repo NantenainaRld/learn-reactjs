@@ -24,3 +24,21 @@
 ## Hello World:
     - Edit the `src/App.jsx` file and save.
     - The changes are applied automatically via **HMR** (Hot Module Replacement) without a full page reload.      
+
+## Folder structure:
+    - **package.json**:
+        - Contains project metadata, dependencies, and scripts (`dev`, `build`, `preview`).
+    - **node_modules**:
+        - Contains all installed dependencies (never modify this folder manually).
+    - **index.html**:
+        - The entry point for the browser. In Vite, it's at the root and contains the `<div id="root"></div>` where React injects the UI.
+    - **public/**:
+        - Contains static assets (images, icons) that don't need processing by Vite.
+    - **src/main.jsx**:
+        - The JavaScript entry point. Uses `createRoot` from `react-dom/client` to render the App.
+    - **src/App.jsx**:
+        - The main component of your application.
+    - **vite.config.js**:
+        - Configuration file for Vite (plugins, server ports, etc.).
+
+## 02
