@@ -146,3 +146,8 @@
 - Props are read-only (immutable). A component should never modify its own props.
 - You can destructure props directly in the function arguments for cleaner code.
 - Fragments `<>` can be used if you need to return multiple elements alongside props/children.
+
+# 04
+## State :
+    - State is a variable that managed by the component
+    - look at the Greet.jsx ` # 04 - State `

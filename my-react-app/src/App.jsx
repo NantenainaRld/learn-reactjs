@@ -4,11 +4,12 @@ import Welcome from "./components/Welcome";
 function App() {
   return (
     <>
-      <Greet className="This is an example of props" />
+      {/* <Greet className="This is an example of props" />
       <Greet>
         <button>THis is the children</button>
       </Greet>
-      <Welcome />
+      <Welcome /> */}
+      <Greet />
     </>
   );
 }
