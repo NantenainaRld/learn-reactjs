@@ -151,3 +151,7 @@
 ## State :
     - State is a variable that managed by the component
     - look at the Greet.jsx ` # 04 - State `
+
+## Method as props :
+    - we assign an function of the parent like a props and call this function in the child props
+    - look at the Greet.jsx and App.jsx` 04 - Method as props `
