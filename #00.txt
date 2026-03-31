@@ -103,10 +103,24 @@
 
 ## Rules and Exports:
 
-- Single Parent Rule**: A component must return a single parent element (use Fragments `<>` if needed).
+- A component must return a single parent element (use Fragments `<>` if needed).
 - Default Export: 
     - Usage: `export default Greet;`
     - Import: `import Greet from './components/Greet';` (You can rename the variable during import).
 - Named Export: 
     - Usage: `export const Greet = () => ...;`
     - Import: `import { Greet } from './components/Greet';` (Must use the exact name inside curly braces).
+
+# 03
+## Props :
+    - Props all the variable (attributes) used in the html in the component :
+        - Greet.jsx : 
+            `` export default const Greet = ({ className }) => <h1> {className} </h1> `` 
+        - App.jsx :
+            `` <Greet className="Props example"/> ``
+## Children :
+    - children of the component and it must used with double balise component :
+        - Greet.jsx :
+            `` export default const Greet = ({ children }) => <h1> Test {children} </h1> ``
+        - App.jsx :
+            `` <Greet> Tsis is the children </Greet> ``

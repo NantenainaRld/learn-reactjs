@@ -4,7 +4,10 @@ import Welcome from "./components/Welcome";
 function App() {
   return (
     <>
-      <Greet />
+      <Greet className="This is an example of props" />
+      <Greet>
+        <button>THis is the children</button>
+      </Greet>
       <Welcome />
     </>
   );
