@@ -112,15 +112,37 @@
     - Import: `import { Greet } from './components/Greet';` (Must use the exact name inside curly braces).
 
 # 03
-## Props :
-    - Props all the variable (attributes) used in the html in the component :
-        - Greet.jsx : 
-            `` export default const Greet = ({ className }) => <h1> {className} </h1> `` 
-        - App.jsx :
-            `` <Greet className="Props example"/> ``
-## Children :
-    - children of the component and it must used with double balise component :
-        - Greet.jsx :
-            `` export default const Greet = ({ children }) => <h1> Test {children} </h1> ``
-        - App.jsx :
-            `` <Greet> Tsis is the children </Greet> ``
+## Props:
+- Props are attributes passed to components, similar to function arguments.
+- Example:
+    - Greet.jsx:
+        ```jsx
+        const Greet = ({ title }) => {
+            return <h1> {title} </h1>;
+        };
+        export default Greet;
+        ```
+    - App.jsx:
+        ```jsx
+        <Greet title="Props example" />
+        ```
+
+## Children:
+- The `children` prop allows you to pass elements or text between the opening and closing tags of a component.
+- Example:
+    - Greet.jsx:
+        ```jsx
+        const Greet = ({ children }) => {
+            return <div> Content: {children} </div>;
+        };
+        export default Greet;
+        ```
+    - App.jsx:
+        ```jsx
+        <Greet> This is the children content </Greet>
+        ```
+
+## Important Notes:
+- Props are read-only (immutable). A component should never modify its own props.
+- You can destructure props directly in the function arguments for cleaner code.
+- Fragments `<>` can be used if you need to return multiple elements alongside props/children.
